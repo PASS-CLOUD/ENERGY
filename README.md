@@ -132,5 +132,40 @@ Currently, there are patents on specific algorithms and systems for fleet manage
 I calculated the market size using industry reports and market research data. The TAM was derived from the total global fleet management market value. The SAM was estimated based on the proportion of the market interested in sustainability and decarbonization. The SOM was calculated considering our competitive positioning and potential market share.
 
 ---
+Here are some potential limitations of the code provided:
 
-This `README.md` file provides a comprehensive overview and detailed instructions for your project, making it easier for reviewers to understand and run your code.
+1. **Data Dependence**:
+   - The effectiveness of the model relies heavily on the quality and accuracy of the input data (CSV files). Any inaccuracies or missing data can significantly impact the results.
+
+2. **Static Assumptions**:
+   - The model uses static percentages for resale value, insurance costs, and maintenance costs. These values may not reflect real-world variations and changes over time.
+
+3. **Simplified Resale Value, Insurance, and Maintenance Calculations**:
+   - The calculations for resale value, insurance, and maintenance are simplified and may not capture all the factors influencing these costs in a real-world scenario.
+
+4. **Fixed Carbon Emission Limits**:
+   - The model uses fixed carbon emission limits from the carbon_emissions.csv file. These limits may change over time due to regulatory changes or new environmental policies.
+
+5. **Vehicle-Fuel Compatibility**:
+   - The model assumes that vehicle-fuel compatibility is binary (either a vehicle is compatible with a fuel type, or it is not). It does not account for partial compatibility or adaptation costs.
+
+6. **Single Objective Function**:
+   - The model optimizes a single objective function, which is the minimization of costs. It does not consider other important factors such as operational efficiency, customer satisfaction, or environmental impact beyond carbon emissions.
+
+7. **Simplified Demand Satisfaction**:
+   - The model assumes that the demand for different vehicle sizes and distance buckets can be met exactly as specified in the demand.csv file. It does not account for potential variations or uncertainties in demand.
+
+8. **Limited Time Horizon**:
+   - The model is designed to optimize decisions over a fixed time horizon (2023-2038). It does not account for long-term strategic planning beyond this period.
+
+9. **Fleet Sell Limit Constraint**:
+   - The constraint on the fleet sell limit may not reflect real-world operational flexibility or constraints. It assumes a maximum of 20% of the fleet can be sold in any given year.
+
+10. **Computational Complexity**:
+    - The linear programming model can become computationally intensive as the number of vehicles, fuel types, and years increases, potentially leading to longer solve times or even infeasibility for large-scale problems.
+
+11. **No Consideration for Technological Advancements**:
+    - The model does not account for potential technological advancements in vehicle efficiency, fuel types, or emissions reduction technologies that could emerge during the planning period.
+
+12. **Assumption of Constant Costs**:
+    - The costs of fuels, maintenance, and insurance are assumed to be constant or follow predefined percentages. These costs can fluctuate due to market dynamics, economic conditions, or changes in policy.
